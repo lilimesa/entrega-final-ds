@@ -1,0 +1,35 @@
+@use "../utilities/variables" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.crimson-pro {
+  font-family: "Crimson Pro", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: $spacing-sm;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Crimson Pro", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.75rem; margin-bottom: $spacing-sm}
+h3 { font-size: 1.4rem; margin-bottom: $spacing-xs}
+h4 { font-size: 1.2rem; margin-bottom: $spacing-xs}

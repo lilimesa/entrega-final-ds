@@ -1,0 +1,14 @@
+/*
+Los mixins son bloques de código reutilizable en Sass.
+Se usan para evitar duplicar estilos y hacer el CSS más dinámico y escalable.
+Se “invoca” con @include donde lo necesites.
+*/
+
+@mixin flex($wrap,$direction,$justify,$items,$gap){
+    display: flex;
+    flex-wrap: $wrap;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $items;
+    gap: $gap;
+}

@@ -1,0 +1,39 @@
+@use "../utilities/variables" as *;
+
+.btnPrimary{
+    background-color: $colorPrincipal;
+    padding: 1rem 1.25rem;
+    color: $colorBlanco;
+    border-radius: .5rem;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+}
+.btnSecondary{
+  padding: 1rem 1.25rem;
+  color: $colorOscuro;
+  border: 1px solid $colorOscuro;
+  border-radius: .5rem;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+}
+.btnWhite{
+  display: inline-block;
+  background-color: $colorBlanco;
+  padding: 1rem 1.25rem;
+  color: $colorPrincipal;
+  border-radius: .5rem;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+}
+.btnListen{
+  background-color: $colorOscuro;
+  padding: 1rem 1.25rem;
+  color: $colorBlanco;
+  border-radius: .5rem;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+}

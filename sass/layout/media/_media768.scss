@@ -1,0 +1,64 @@
+@media (max-width: 768px) {
+
+  /* ---------------------------------- */
+  /* CABECERA */
+  /* ---------------------------------- */
+
+  .hero .hero-content{
+    display: block;
+  }
+  .text .stats{
+    display: flex;
+    grid-gap: 40px;
+    justify-content: flex-start;
+    margin-bottom: 2.5rem;
+  }
+  .text .stats .stats-info h4{
+    font-size: 1.75rem;
+    font-weight: 800;
+  }
+  .text .stats .stats-info span{
+    font-size: 1rem;
+  }
+  .hero .img-header img{
+    width: 100%;
+  }
+
+  /* ---------------------------------- */
+  /* SECCIÓN PROCESO */
+  /* ---------------------------------- */
+
+  .process{
+    background-color: #ffffff;
+    padding-bottom: 2.5rem;
+  }
+
+  .process .contenedor .process-content{
+    display: block;
+  }
+  .process .image-placeholder img{
+    width: 100%;
+  }
+  .process .steps{
+    margin-top: 2.5rem;
+  }
+
+  /* ---------------------------------- */
+  /* SECCIÓN NUESTROS PODCASTS */
+  /* ---------------------------------- */
+
+  .success-stories .tags{
+    display: flex;
+    justify-content: center;
+    grid-gap: .9375rem;
+    margin-top: -1.25rem;
+    margin-bottom: 2.5rem;
+  }
+  .success-stories .contenedor .podcast-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 1.25rem;
+  }
+
+}

@@ -1,0 +1,24 @@
+/* utilities */
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+@use "../components/buttons" as *;
+
+header{
+    navbar{
+        background-color: $colorCrema;
+    }
+    .container-fluid{
+        width: 100%;
+        max-width: 85.375rem;
+        margin: 0 auto;
+    }
+    .btn-primary{
+        @extend .btnPrimary;
+        border: none;
+    }
+    .btn-primary:hover{
+        @extend .btnPrimary;
+            background-color: #7828be;
+    }
+
+}
