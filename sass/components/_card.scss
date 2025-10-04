@@ -1,0 +1,23 @@
+@use "../utilities/mixins" as *;
+@use "../components/buttons" as *;
+@use "../utilities/variables" as *;
+
+.podcast-card{
+    background-color: $colorBlanco;
+    border-radius: 1.25rem;
+    padding: 1.25rem;
+    overflow: hidden;
+    text-align: center;
+        .cover img{
+            border-radius: .625rem;
+            width: 100%;
+            height: auto;
+            display: block;
+            max-width: 100%;
+            margin-bottom: .9375rem;
+        }
+        .btn-listen{
+            display: block;
+            margin-top: 1.25rem;
+        }
+}

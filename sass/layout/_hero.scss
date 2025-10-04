@@ -3,11 +3,11 @@
 @use "../utilities/variables" as *;
 
 .hero{
-    background-color: #FDF7F0;
+    background-color: $colorCrema;
     padding-top: 2.5rem;
     padding-bottom: 3.75rem;
         .hero-content{
-            @include flex(nowrap,row,center,space-between,3.75rem)
+            @include flex(nowrap,row,space-between,center,3.75rem)
         }
         h1{
             font-size: 3.875rem;
@@ -21,22 +21,31 @@
             font-weight: 100;
         }
         .buttons{
-            @include flex(wrap,row,none,space-between,1.25rem);
+            @include flex(wrap,row,flex-start,none,1.25rem);
             margin-top: 2.5rem;
             margin-bottom: 2.5rem;
         }
-        .btn-primary{
-            @extend .btnPrimary;
+        .text .stats{
+            @include flex(wrap,row,flex-start,center,2.5rem);
         }
-        .btn-primary:hover{
-            @extend .btnPrimary;
-            background-color: $colorPrincipalHover;
+        .text .stats .stats-info h4{
+            font-size: 1.75rem;
+            font-weight: 800;
         }
-        .btn-secondary{
-            @extend .btnSecondary;
+        .text .stats .stats-info span{
+            font-size: 1rem;
         }
-        .btn-secondary:hover{
-            @extend .btnPrimary;
-            background-color: $colorPrincipalHover;
+}
+
+.logos-bar{
+    background-color: $colorPrincipal;
+        .contenedor{
+            @include flex(wrap,row,space-between,center,2.5rem);
+            padding-top: 1.25rem;
+            padding-bottom: 1.25rem;
+        }
+        img{
+            width: auto;
+            height: 30px;
         }
 }

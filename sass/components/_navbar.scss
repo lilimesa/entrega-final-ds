@@ -4,21 +4,19 @@
 @use "../components/buttons" as *;
 
 header{
-    navbar{
+    .navbar{
         background-color: $colorCrema;
-    }
-    .container-fluid{
-        width: 100%;
-        max-width: 85.375rem;
-        margin: 0 auto;
+            .container-fluid{
+                width: 100%;
+                max-width: 85.375rem;
+                margin: 0 auto;
+            }
     }
     .btn-primary{
-        @extend .btnPrimary;
+        @extend .btn-primary;
         border: none;
+        &:hover{
+            background-color: $colorPrincipalHover;
+        }
     }
-    .btn-primary:hover{
-        @extend .btnPrimary;
-            background-color: #7828be;
-    }
-
 }

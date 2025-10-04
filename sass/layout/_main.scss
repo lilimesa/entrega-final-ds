@@ -1,14 +1,270 @@
+@use "../utilities/mixins" as *;
+@use "../components/buttons" as *;
+@use "../utilities/variables" as *;
+
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: #f5f5f5 !important;
-  color: #262626;
+  background-color: $colorBackground !important;
+  color: $colorOscuro;
   line-height: 1.6;
   font-weight: 200;
 }
 .contenedor {
-  border: 1px solid red;
+  // border: 1px solid red;
   width: 100%;
   max-width: 85.375rem;
   margin: 0 auto;
   padding: 10px 24px;
+}
+
+.info-title-container{
+  text-align: center;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+    h2{
+      font-size: 2.25rem;
+      font-weight: 700;
+    }
+    p{
+      font-size: 1.375rem;
+      font-weight: 200;
+    }
+}
+
+/* ---------------------------------- */
+/* SECCIÓN SERVICIOS */
+/* ---------------------------------- */
+
+.services{
+  background-color: $colorBackground;
+    .service-grid{
+      @include grid(1fr 1fr,2fr,space-between,1.875rem);
+        .service-card{
+          @include grid(1fr,3fr,none,.625rem);
+          background-color: $colorBlanco;
+          border-radius: 1.25rem;
+          padding: 1.875rem;
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.009);
+        }
+    }
+    .buttons{
+      text-align: center;
+      padding-top: 4.375rem;
+      padding-bottom: 4.375rem;
+    }
+}
+
+/* ---------------------------------- */
+/* SECCIÓN PROCESO */
+/* ---------------------------------- */
+
+.process{
+  background-color: $colorBlanco;
+  padding-bottom: 4.375rem;
+    .process-content{
+      @include flex(none,row,space-between,center,3.75rem);
+        .step{
+          @include flex(none,row,space-between,center,1.25rem);
+          border: 1px solid #262626;
+          border-radius: 1.25rem;
+          padding: 1.25rem;
+          margin-bottom: 1.25rem;
+            img{
+              width: 59px;
+              height: 59px;
+            }
+        }
+    }
+    .image-placeholder img{
+      width: 100%;
+    }
+}
+
+/* ---------------------------------- */
+/* SECCIÓN NUESTROS PODCASTS */
+/* ---------------------------------- */
+
+.success-stories{
+  background-color: $colorCrema;
+    .contenedor .podcast-grid{
+      @include grid(repeat(4, 1fr),1fr,space-between,1.25rem);
+    }
+    .tags{
+      display: flex;
+      justify-content: center;
+      grid-gap: .9375rem;
+      margin-top: -1.25rem;
+      margin-bottom: 2.5rem;
+        button{
+          background-color: transparent;
+          border: 1px solid #262626;
+          border-radius: 10px;
+          padding: 5px 12px;
+          &:hover{
+            background-color: $colorPrincipal;
+            border: 1px solid $colorPrincipal;
+            border-radius: 10px;
+            color: $colorBlanco;
+            padding: 5px 12px;
+          }
+        }
+    }
+    .buttons{
+      text-align: center;
+      padding-top: 4.375rem;
+      padding-bottom: 4.375rem;
+    }
+}
+
+/* ---------------------------------- */
+/* PÁGINA: NUESTROS PODCASTS */
+/* ---------------------------------- */
+
+.podcasts-categories{
+  background-color: $colorBackground;
+  padding-top: 3.75rem;
+    a{
+      text-decoration: none;
+    }
+    .contenedor{
+      @include grid(40% 1fr,none,none,1.25rem);
+        .star-category{
+          border-radius: 20px;
+          background-size: cover;
+          background-position: center center;
+            .texts{
+              @include flex(wrap,column,flex-end,flex-start,none);
+              padding: 10px 20px;
+              border-radius: 20px;
+              height: 100%;
+              color: $colorBlanco;
+              background: $colorNegro;
+              background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0) 100%);
+            }
+        }
+        .category-grid{
+          @include grid(repeat(2, 1fr),none,none,1.25rem);
+            .category-card{
+              border-radius: 1.25rem;
+              min-height: 300px;
+              font-weight: 600;
+              background-size: cover;
+              background-position: center center;
+                .texts{
+                  @include flex(wrap,column,flex-end,flex-start,none);
+                  padding: 10px 20px;
+                  border-radius: 20px;
+                  height: 100%;
+                  color: $colorBlanco;
+                  background: $colorNegro;
+                  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0) 100%);
+                    span{
+                      font-size: .9375rem;
+                      font-weight: 200;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.podcasts-row{
+  margin-bottom: 3.75rem;
+    .podcast-grid{
+      @include grid(repeat(4, 1fr),1fr,none,1.25rem);
+        .podcast-card{
+          background-color: $colorBlanco;
+          border-radius: 1.25rem;
+          padding: 1.25rem;
+          overflow: hidden;
+          text-align: center;
+            .cover img{
+              border-radius: .625rem;
+              width: 100%;
+              height: auto;
+              display: block;
+              max-width: 100%;
+              margin-bottom: .9375rem;
+            }
+            .btn-listen{
+              display: block;
+              margin-top: 1.25rem;
+            }
+        }
+    }
+    .info-title-category{
+      padding-top: 2.5rem;
+      padding-bottom: 1.25rem;
+    }
+}
+
+/* ---------------------------------- */
+/* PÁGINA: NUESTROS PLANES */
+/* ---------------------------------- */
+
+.plans .plans-grid{
+  display: flex;
+  grid-gap: 1.25rem;
+}
+.plans .plans-grid .plan-card{
+  background-color: #ffffff;
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.009);
+}
+.plans .plans-grid .plan-basic .btn-secondary{
+  display: block;
+  margin: 1.25rem 0;
+}
+.plans .plans-grid .plan-premium .btn-secondary{
+  display: block;
+  margin: 1.25rem 0;
+}
+.plans .plans-grid .plan-basic h3{
+  color: #A461DE;
+}
+.plans .plans-grid .plan-premium h3{
+  color: #A461DE;
+}
+.plans .plans-grid .plan-mid{
+  background-color: #A461DE;
+  color: #ffffff;
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.009);
+}
+.plans .plans-grid .plan-mid .btn-white{
+  display: block;
+  margin: 1.25rem 0;
+}
+.plans .plans-grid .price{
+  font-size: 2rem;
+  font-weight: 700;
+}
+.plans .plans-grid .price span{
+  font-size: 1rem;
+  font-weight: 100;
+}
+.plans .plans-grid .note{
+  display: block;
+  font-weight: 100;
+  padding-top: 1.25rem;
+}
+.help-cta{
+  text-align: center;
+  margin-top: 2.5rem;
+  margin-bottom: 5rem;
+}
+.help-cta h3{
+  font-size: 2rem;
+  font-weight: 700;
+}
+.help-cta p{
+  font-size: 1.375rem;
+  font-weight: 200;
+}
+.help-cta .space{
+  display: block;
+  height: 20px;
 }

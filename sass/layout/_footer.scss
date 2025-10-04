@@ -1,0 +1,48 @@
+@use "../utilities/mixins" as *;
+@use "../components/buttons" as *;
+@use "../utilities/variables" as *;
+
+/* ---------------------------------- */
+/* FOOTER */
+/* ---------------------------------- */
+
+footer {
+  background-color: $colorOscuro;
+  color: $colorBlanco;
+  font-size: 0.9rem;
+  font-weight: 200;
+  padding-top: 2.5rem;
+    a{
+        color: $colorBlanco;
+        text-decoration: none;
+        &:hover{text-decoration: underline;}
+    }
+    .contenedor{
+        display: flex;
+        justify-content: space-between;
+        grid-gap: 1.875rem;
+        margin-bottom: 1.25rem;
+            .footer-col ul{
+                padding-left: 0px;
+                    li{
+                        list-style: none;
+                    }
+            }
+    }
+}
+ 
+.footer-bottom {
+  width: 100%;
+  max-width: 85.375rem;
+  margin: 0 auto;
+  padding: 0 .625rem 0 .625rem;
+  border-top: 1px solid $colorBlanco;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.25rem 0 1.25rem 0;
+    a{
+        padding: 0 10px 0 0;
+        color: $colorBlanco;
+        text-decoration: none;
+    }
+}

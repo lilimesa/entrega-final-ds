@@ -12,3 +12,10 @@ Se “invoca” con @include donde lo necesites.
     align-items: $items;
     gap: $gap;
 }
+@mixin grid($columns,$rows,$justify,$gap){
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+    justify-content: $justify;
+    grid-gap: $gap;
+}

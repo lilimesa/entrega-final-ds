@@ -1,6 +1,6 @@
 @use "../utilities/variables" as *;
 
-.btnPrimary{
+.btn-primary{
     background-color: $colorPrincipal;
     padding: 1rem 1.25rem;
     color: $colorBlanco;
@@ -8,8 +8,11 @@
     font-size: 1rem;
     text-align: center;
     text-decoration: none;
+    &:hover{
+      background-color: $colorPrincipalHover;
+    }
 }
-.btnSecondary{
+.btn-secondary{
   padding: 1rem 1.25rem;
   color: $colorOscuro;
   border: 1px solid $colorOscuro;
@@ -17,8 +20,12 @@
   font-size: 1rem;
   text-align: center;
   text-decoration: none;
+  &:hover{
+    color: $colorBlanco;
+    background-color: $colorPrincipalHover;
+  }
 }
-.btnWhite{
+.btn-white{
   display: inline-block;
   background-color: $colorBlanco;
   padding: 1rem 1.25rem;
@@ -28,7 +35,7 @@
   text-align: center;
   text-decoration: none;
 }
-.btnListen{
+.btn-listen{
   background-color: $colorOscuro;
   padding: 1rem 1.25rem;
   color: $colorBlanco;
