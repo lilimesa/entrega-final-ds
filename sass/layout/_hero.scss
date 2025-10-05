@@ -36,9 +36,6 @@
             @include tablet{
                 gap: 1.25rem;
             }
-            @include mobile{
-                gap: .3125rem;
-            }
         }
         .text .stats .stats-info h4{
             font-size: 1.75rem;
@@ -84,7 +81,7 @@
                 height: 20px;
             }
             @include mobile{
-                height: 16px;
+                height: 10px;
             }
         }
 }

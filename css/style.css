@@ -177,11 +177,6 @@ h4 {
     gap: 1.25rem;
   }
 }
-@media (max-width: 576px) {
-  .hero .text .stats {
-    gap: 0.3125rem;
-  }
-}
 .hero .text .stats .stats-info h4 {
   font-size: 1.75rem;
   font-weight: 800;
@@ -240,7 +235,7 @@ h4 {
 }
 @media (max-width: 576px) {
   .logos-bar img {
-    height: 16px;
+    height: 10px;
   }
 }
 
@@ -374,8 +369,11 @@ body {
 }
 .success-stories .tags {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
-  grid-gap: 0.9375rem;
+  align-items: center;
+  gap: 0.9375rem;
   margin-top: -1.25rem;
   margin-bottom: 2.5rem;
 }
