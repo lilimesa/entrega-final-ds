@@ -75,7 +75,7 @@ body {
 
         .step{
           @include flex(none,row,space-between,center,1.25rem);
-          border: 1px solid #262626;
+          border: 1px solid $colorOscuro;
           border-radius: 1.25rem;
           padding: 1.25rem;
           margin-bottom: 1.25rem;

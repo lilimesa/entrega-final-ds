@@ -177,6 +177,11 @@ h4 {
     gap: 1.25rem;
   }
 }
+@media (max-width: 576px) {
+  .hero .text .stats {
+    gap: 0.3125rem;
+  }
+}
 .hero .text .stats .stats-info h4 {
   font-size: 1.75rem;
   font-weight: 800;
@@ -187,6 +192,11 @@ h4 {
 @media (max-width: 768px) {
   .hero .text .stats .stats-info span {
     font-size: 0.875rem;
+  }
+}
+@media (max-width: 576px) {
+  .hero .text .stats .stats-info span {
+    font-size: 0.75rem;
   }
 }
 .hero .img-header {
@@ -214,13 +224,23 @@ h4 {
     gap: 0.625rem;
   }
 }
+@media (max-width: 576px) {
+  .logos-bar .contenedor {
+    gap: 0.3125rem;
+  }
+}
 .logos-bar img {
   width: auto;
   height: 30px;
 }
 @media (max-width: 768px) {
   .logos-bar img {
-    height: 18px;
+    height: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .logos-bar img {
+    height: 16px;
   }
 }
 
