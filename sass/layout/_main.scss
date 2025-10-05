@@ -111,6 +111,12 @@ body {
       @include flex(wrap,row,center,center,.9375rem);
       margin-top: -1.25rem;
       margin-bottom: 2.5rem;
+
+      @include mobile{
+        flex-wrap: nowrap;
+        overflow: hidden;
+      }
+
         button{
           background-color: transparent;
           border: 1px solid $colorOscuro;
