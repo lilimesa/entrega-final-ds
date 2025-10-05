@@ -4,11 +4,13 @@
     background-color: $colorPrincipal;
     padding: 1rem 1.25rem;
     color: $colorBlanco;
+    border: none;
     border-radius: .5rem;
     font-size: 1rem;
     text-align: center;
     text-decoration: none;
-    &:hover{
+    transition: background-color 0.3s ease;
+    &:hover {
       background-color: $colorPrincipalHover;
     }
 }
@@ -20,9 +22,11 @@
   font-size: 1rem;
   text-align: center;
   text-decoration: none;
+  transition: background-color 0.3s ease;
   &:hover{
     color: $colorBlanco;
     background-color: $colorPrincipalHover;
+    border: 1px solid $colorPrincipalHover;
   }
 }
 .btn-white{

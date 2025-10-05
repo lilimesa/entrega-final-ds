@@ -1,10 +1,11 @@
 @use "../utilities/mixins" as *;
 @use "../components/buttons" as *;
 @use "../utilities/variables" as *;
+@use "../layout/media/media-queries" as *;
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: $colorBackground !important;
+  background-color: $colorFondo !important;
   color: $colorOscuro;
   line-height: 1.6;
   font-weight: 200;
@@ -36,9 +37,13 @@ body {
 /* ---------------------------------- */
 
 .services{
-  background-color: $colorBackground;
+  background-color: $colorFondo;
     .service-grid{
       @include grid(1fr 1fr,2fr,space-between,1.875rem);
+
+      @include tablet{
+        grid-template-columns: 1fr;
+      }
         .service-card{
           @include grid(1fr,3fr,none,.625rem);
           background-color: $colorBlanco;
@@ -63,6 +68,11 @@ body {
   padding-bottom: 4.375rem;
     .process-content{
       @include flex(none,row,space-between,center,3.75rem);
+
+      @include tablet{
+        flex-direction: column;
+      }
+
         .step{
           @include flex(none,row,space-between,center,1.25rem);
           border: 1px solid #262626;
@@ -88,6 +98,14 @@ body {
   background-color: $colorCrema;
     .contenedor .podcast-grid{
       @include grid(repeat(4, 1fr),1fr,space-between,1.25rem);
+
+      @include tablet{
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include mobile{
+        grid-template-columns: 1fr;
+      }
+
     }
     .tags{
       display: flex;
@@ -97,7 +115,7 @@ body {
       margin-bottom: 2.5rem;
         button{
           background-color: transparent;
-          border: 1px solid #262626;
+          border: 1px solid $colorOscuro;
           border-radius: 10px;
           padding: 5px 12px;
           &:hover{
@@ -121,17 +139,25 @@ body {
 /* ---------------------------------- */
 
 .podcasts-categories{
-  background-color: $colorBackground;
+  background-color: $colorFondo;
   padding-top: 3.75rem;
     a{
       text-decoration: none;
     }
     .contenedor{
       @include grid(40% 1fr,none,none,1.25rem);
+
+      @include tablet{
+        grid-template-columns: 1fr;
+      }
         .star-category{
           border-radius: 20px;
           background-size: cover;
           background-position: center center;
+
+          @include tablet{
+            min-height: 300px;
+          }
             .texts{
               @include flex(wrap,column,flex-end,flex-start,none);
               padding: 10px 20px;
@@ -173,6 +199,14 @@ body {
   margin-bottom: 3.75rem;
     .podcast-grid{
       @include grid(repeat(4, 1fr),1fr,none,1.25rem);
+
+      @include tablet{
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include mobile{
+        grid-template-columns: 1fr;
+      }
+
         .podcast-card{
           background-color: $colorBlanco;
           border-radius: 1.25rem;
@@ -204,67 +238,220 @@ body {
 /* ---------------------------------- */
 
 .plans .plans-grid{
-  display: flex;
-  grid-gap: 1.25rem;
+  @include flex(none,row,center,none,1.25rem);
+
+  @include tablet{
+    flex-direction: column;
+  }
+      
+    .plan-card{
+      background-color: $colorBlanco;
+      border-radius: 1.25rem;
+      padding: 1.25rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+    }
+    .plan-basic{
+      .btn-secondary{
+        display: block;
+        margin: 1.25rem 0;
+      }
+      h3{
+        color: $colorPrincipal;
+      }
+    }
+    .plan-premium{
+      .btn-secondary{
+        display: block;
+        margin: 1.25rem 0;
+      }
+      h3{
+        color: $colorPrincipal;
+      }
+    }.plan-mid{
+        background-color: #A461DE;
+        color: #ffffff;
+        border-radius: 1.25rem;
+        padding: 1.25rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          .btn-white{
+            display: block;
+            margin: 1.25rem 0;
+          }
+      }
+      .price{
+        font-size: 2rem;
+        font-weight: 700;
+      }
+      .price span{
+        font-size: 1rem;
+        font-weight: 100;
+      }
+      .note{
+        display: block;
+        font-weight: 100;
+        padding-top: 1.25rem;
+      }
+
 }
-.plans .plans-grid .plan-card{
-  background-color: #ffffff;
-  border-radius: 1.25rem;
-  padding: 1.25rem;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.009);
-}
-.plans .plans-grid .plan-basic .btn-secondary{
-  display: block;
-  margin: 1.25rem 0;
-}
-.plans .plans-grid .plan-premium .btn-secondary{
-  display: block;
-  margin: 1.25rem 0;
-}
-.plans .plans-grid .plan-basic h3{
-  color: #A461DE;
-}
-.plans .plans-grid .plan-premium h3{
-  color: #A461DE;
-}
-.plans .plans-grid .plan-mid{
-  background-color: #A461DE;
-  color: #ffffff;
-  border-radius: 1.25rem;
-  padding: 1.25rem;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.009);
-}
-.plans .plans-grid .plan-mid .btn-white{
-  display: block;
-  margin: 1.25rem 0;
-}
-.plans .plans-grid .price{
-  font-size: 2rem;
-  font-weight: 700;
-}
-.plans .plans-grid .price span{
-  font-size: 1rem;
-  font-weight: 100;
-}
-.plans .plans-grid .note{
-  display: block;
-  font-weight: 100;
-  padding-top: 1.25rem;
-}
+
 .help-cta{
   text-align: center;
   margin-top: 2.5rem;
   margin-bottom: 5rem;
+    h3{
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    p{
+      font-size: 1.375rem;
+      font-weight: 200;
+    }
+    .space{
+      display: block;
+      height: 20px;
+    }
 }
-.help-cta h3{
-  font-size: 2rem;
-  font-weight: 700;
+
+/* ---------------------------------- */
+/* PÁGINA: NOSOTROS */
+/* ---------------------------------- */
+
+.hero-image{
+  position: relative;
+  overflow: hidden;
+  width: auto;
+    img{
+      display: block;
+      width: 100%;
+    }
 }
-.help-cta p{
-  font-size: 1.375rem;
-  font-weight: 200;
+.about-us{
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+
+  @include mobile{
+    padding-top: 1.875em;
+  }
+
+    .contenedor{
+      width: 48.75rem;
+
+      @include tablet{
+        width: 100%;
+      }
+
+        h2{
+          font-size: 3.75rem;
+          padding-bottom: 1.25rem;
+          text-align: center;
+
+          @include mobile{
+            padding-bottom: .625rem;
+          }
+
+        }
+  }
+}// 🧾 Sección principal
+.contacto {
+  background-color: $colorFondo;
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  color: $colorTexto;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $colorTexto;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: $colorPlaceholder;
+    margin-bottom: 2rem;
+  }
 }
-.help-cta .space{
-  display: block;
-  height: 20px;
+
+/* ---------------------------------- */
+/* PÁGINA: CONTACTO */
+/* ---------------------------------- */
+
+.asesoria {
+  padding-top: 1.25rem;
+  padding-bottom: 3.75rem;
+  color: $colorTexto;
+
+  h1 {
+    margin: 0 0 .5rem;
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+  > p {
+    margin: 0 0 1.25rem;
+    color: $color-muted;
+  }
+}
+
+/* formulario */
+
+.form-asesoria {
+  max-width: 880px;
+  margin: 0 auto;
+  background: $color-bg;
+  border: 1px solid $color-border;
+  border-radius: .75rem;
+  padding: 1.5rem;
+
+  .fila {
+    @include flex(wrap,row,none,none,1rem);
+  }
+
+  .campo {
+    @include flex(wrap,column,none,none,none);
+    flex: 1 1 260px;
+    margin-bottom: 1rem;
+
+    label {
+      font-weight: 600;
+      margin-bottom: .5rem;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: .85rem 1rem;
+      border: 1px solid $color-border;
+      border-radius: .6rem;
+      background: #fff;
+      color: $colorTexto;
+      transition: border-color .2s ease, box-shadow .2s ease;
+
+      &:focus {
+        outline: none;
+        border-color: $colorPrincipal;
+        box-shadow: 0 0 0 3px rgba(46, 111, 253, .15);
+      }
+    }
+
+    textarea { resize: vertical; }
+  }
+
+  .check {
+    @include flex(wrap,row,none,center,.5rem);
+    margin: .25rem 0 1rem;
+
+    input[type="checkbox"] {
+      width: 1.1rem;
+      height: 1.1rem;
+      accent-color: $colorPrincipal;
+    }
+  }
 }

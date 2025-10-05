@@ -17,3 +17,6 @@
 @use "./components/buttons" as *;
 @use "./components/card" as *;
 @use "./components/navbar" as *;
+
+/* media queries */
+@use "./layout/media/media-queries" as *;

@@ -14,7 +14,7 @@
   <meta property="og:type" content="website">
   <!-- robots -->
   <meta name="robots" content="index,follow">
-  <title>Nuestros planes - VozLab</title>
+  <title>Agenda tu asesoría - VozLab</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +43,7 @@
               <a class="nav-link" aria-current="page" href="podcasts.html">Podcasts</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="nuestros-planes.html">Nuestros Planes</a>
+              <a class="nav-link" href="nuestros-planes.html">Nuestros Planes</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="nosotros.html">Nosotros</a>
@@ -55,112 +55,81 @@
     </nav>
   </header>
 
-  <!-- Planes -->
-  <section class="plans">
+  <section class="asesoria">
     <div class="contenedor">
-      <!-- Título y descripción -->
       <div class="info-title-container">
-        <h2>Nuestros planes</h2>
-        <p>En VozLab creemos que cada voz merece ser escuchada con calidad. Elige el plan que mejor se adapta a tu proyecto de podcast. ¿Lista para despegar?</p>
+        <h2>Agenda tu asesoría</h2>
+        <p>Completa el formulario y te contactaremos para confirmar fecha y hora.</p>
       </div>
-      <div class="plans-grid">
-        <!-- Plan 1 -->
-        <div class="plan-card plan-basic">
-          <h3>Plan “Micrófono en Mano”</h3>
-          <p class="price">$650.000 <span>Por proyecto</span></p>
-          <a href="contacto.html" class="btn-secondary">Quiero comenzar</a>
-          <div class="includes">
-            <h4>Incluye:</h4>
-            <ul>
-              <li>Asesoría de 1 hora para definir concepto y estructura del podcast</li>
-              <li>Guion básico para 1 episodio (máx. 20 minutos)</li>
-              <li>Grabación en remoto con guía técnica (Zoom o Riverside)</li>
-              <li>Edición básica: limpieza, cortes y montaje</li>
-              <li>Portada del podcast (una propuesta gráfica)</li>
-              <li>Subida del episodio a Spotify y Apple Podcasts</li>
-              <li>Manual PDF con tips para continuar por tu cuenta</li>
-            </ul>
-            <h4>No incluye:</h4>
-            <ul class="not-included">
-              <li>Música original ni diseño sonoro</li>
-              <li>Intro/outro personalizado</li>
-              <li>Producción de más episodios</li>
-              <li>Identidad visual completa</li>
-              <li>Métricas o seguimiento post-lanzamiento</li>
-            </ul>
-            <i class="note">👉 Para valientes que quieran empezar con lo esencial sin sacrificar calidad.</i>
+
+      <form action="#" method="post" class="form-asesoria">
+        <div class="fila">
+          <div class="campo">
+            <label for="nombre">Nombre y apellido*</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+
+          <div class="campo">
+            <label for="email">Correo electrónico*</label>
+            <input type="email" id="email" name="email" required>
           </div>
         </div>
 
-        <!-- Plan 2 -->
-        <div class="plan-card plan-mid">
-          <h3>Plan “A Todo Volumen”</h3>
-          <p class="price">$1.500.000 <span>Paquete de 4 episodios</span></p>
-          <a href="contacto.html" class="btn-white">Quiero comenzar</a>
-          <div class="includes">
-            <h4>Incluye:</h4>
-            <ul>
-              <li>Asesoría de 2 horas (storytelling, estrategia, audiencia)</li>
-              <li>Guiones para 4 episodios de 20–30 minutos</li>
-              <li>Grabación asistida (remota o presencial en Medellín)</li>
-              <li>Edición profesional con ambientación ligera</li>
-              <li>Diseño sonoro (intro/outro genéricos incluidos)</li>
-              <li>Portada + miniaturas personalizadas por episodio</li>
-              <li>Publicación en plataformas</li>
-              <li>Acompañamiento por WhatsApp (2 semanas)</li>
-              <li>Kit de promoción con tips de visibilidad</li>  
-            </ul>
-            <h4>No incluye:</h4>
-            <ul class="not-included">
-              <li>Música compuesta a medida</li>
-              <li>Producción de más de 4 episodios</li>
-              <li>Manejo de redes sociales</li>
-              <li>Publicidad paga</li>
-            </ul>
-            <i class="note">👉 Para creadores que quieran despegar con estilo y dejar huella desde el primer episodio.</i>
+        <div class="fila">
+          <div class="campo">
+            <label for="telefono">WhatsApp / Teléfono*</label>
+            <input type="tel" id="telefono" name="telefono" required>
+          </div>
+
+          <div class="campo">
+            <label for="horario">Horario preferido*</label>
+            <select id="horario" name="horario" required>
+              <option value="">Selecciona una opción</option>
+              <option>Mañana (8:00–12:00)</option>
+              <option>Tarde (12:00–17:00)</option>
+              <option>Noche (17:00–20:00)</option>
+            </select>
           </div>
         </div>
 
-        <!-- Plan 3 -->
-        <div class="plan-card plan-premium">
-          <h3>Plan “Podcast de Alto Vuelo”</h3>
-          <p class="price">$3.800.000 <span>Por proyecto</span></p>
-          <a href="contacto.html" class="btn-secondary">Quiero comenzar</a>
-          <div class="includes">
-            <h4>Incluye:</h4>
-            <ul>
-              <li>Concepto narrativo y desarrollo de marca</li>
-              <li>Producción de hasta 8 episodios mensuales (30 min máx c/u)</li>
-              <li>Grabación en estudio profesional (o remoto premium)</li>
-              <li>Edición avanzada, mezcla, música original y diseño sonoro</li>
-              <li>Intro/outro personalizados con voz en off</li>
-              <li>Identidad gráfica completa (portada, miniaturas, audiogramas, reels)</li>
-              <li>Publicación, SEO y descripciones optimizadas</li>
-              <li>Reporte mensual con estadísticas y análisis</li>
-              <li>Soporte creativo permanente (WhatsApp + reuniones de ajuste)</li>
-              <li>Activación en comunidad (respuestas, comentarios)</li>
-            </ul>
-            <h4>No incluye:</h4>
-            <ul class="not-included">
-              <li>Anuncios pagos en redes (opcional como extra)</li>
-              <li>Traducciones multilingües</li>
-              <li>Producción en video (agregable con costo adicional)</li>
-            </ul>
-            <i class="note">👉 Para creadoras que quieren despegar con estilo y dejar huella desde el primer episodio.</i>
+        <div class="fila">
+          <div class="campo">
+            <label for="canal">Canal de la sesión*</label>
+            <select id="canal" name="canal" required>
+              <option value="">Selecciona</option>
+              <option value="zoom">Zoom</option>
+              <option value="meet">Google Meet</option>
+              <option value="whatsapp">Videollamada WhatsApp</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="tema">Tema principal*</label>
+            <select id="tema" name="tema" required>
+              <option value="">Selecciona</option>
+              <option value="branding">Branding / Identidad</option>
+              <option value="web">Sitio web / UX</option>
+              <option value="marketing">Marketing / Contenidos</option>
+              <option value="finanzas">Finanzas personales</option>
+              <option value="otro">Otro</option>
+            </select>
           </div>
         </div>
-      </div>
+
+        <div class="campo">
+          <label for="mensaje">Cuéntame tu caso*</label>
+          <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+        </div>
+
+        <label class="check">
+          <input type="checkbox" id="privacidad" name="privacidad" required>
+          <span>Acepto la política de privacidad*</span>
+        </label>
+
+        <button type="submit" class="btn-primary">Enviar solicitud</button>
+      </form>
     </div>
-  </section>
-
-  <!-- Sección de ayuda -->
-  <section class="help-cta">
-    <div class="contenedor">
-      <h3>¿No sabes cuál elegir?</h3>
-      <p>Agenda una asesoría gratuita y encuentra el plan que mejor se adapta a tu voz.</p>
-      <span class="space"></span>
-      <a href="contacto.html" class="btn-primary">Quiero una asesoría</a>
-    </div>
+  
   </section>
 
   <!-- Footer -->

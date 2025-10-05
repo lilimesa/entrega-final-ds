@@ -1,6 +1,7 @@
 @use "../utilities/mixins" as *;
 @use "../components/buttons" as *;
 @use "../utilities/variables" as *;
+@use "../layout/media/media-queries" as *;
 
 /* ---------------------------------- */
 /* FOOTER */
@@ -18,9 +19,12 @@ footer {
         &:hover{text-decoration: underline;}
     }
     .contenedor{
-        display: flex;
-        justify-content: space-between;
-        grid-gap: 1.875rem;
+        @include flex(none,row,space-between,none,1.875rem);
+
+        @include mobile{
+            flex-wrap: wrap;
+        }
+
         margin-bottom: 1.25rem;
             .footer-col ul{
                 padding-left: 0px;
@@ -32,17 +36,16 @@ footer {
 }
  
 .footer-bottom {
-  width: 100%;
-  max-width: 85.375rem;
-  margin: 0 auto;
-  padding: 0 .625rem 0 .625rem;
-  border-top: 1px solid $colorBlanco;
-  display: flex;
-  justify-content: space-between;
-  padding: 1.25rem 0 1.25rem 0;
-    a{
-        padding: 0 10px 0 0;
-        color: $colorBlanco;
-        text-decoration: none;
-    }
+    @include flex(none,row,space-between,none,1.875rem);
+    width: 100%;
+    max-width: 85.375rem;
+    margin: 0 auto;
+    padding: 0 .625rem 0 .625rem;
+    border-top: 1px solid $colorBlanco;
+    padding: 1.25rem;
+        a{
+            padding: 0 10px 0 0;
+            color: $colorBlanco;
+            text-decoration: none;
+        }
 }

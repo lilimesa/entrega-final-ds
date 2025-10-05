@@ -10,13 +10,19 @@ header{
                 width: 100%;
                 max-width: 85.375rem;
                 margin: 0 auto;
+                .navbar-brand{
+                    width: 130px;
+                }
             }
-    }
-    .btn-primary{
-        @extend .btn-primary;
-        border: none;
-        &:hover{
-            background-color: $colorPrincipalHover;
+        .btn-primary{
+            @extend .btn-primary;
+            border: none;
+            &:hover{
+                background-color: $colorPrincipalHover;
+            }
+        }
+        .active{
+            text-decoration: underline;
         }
     }
 }

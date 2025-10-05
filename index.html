@@ -3,7 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VozLab - Dale voz a tu historia</title>
+  <meta name="description" content="VozLab es una productora creativa de podcasts en Latinoamérica. Ayudamos a marcas y creadores a convertir ideas en experiencias sonoras profesionales: producción, edición, diseño sonoro, estrategia y distribución multicanal.">
+  <meta name="keywords" content="podcast, producción de podcasts, agencia de podcasts, edición de audio, diseño sonoro, estrategia de podcast, distribución podcast, branding sonoro, podcasts en Latinoamérica, creación de podcasts">
+  <meta name="author" content="Liliana Mesa Villegas">
+  <!-- opengraph -->
+  <meta property="og:title" content="VozLab">
+  <meta property="og:description" content="VozLab es una productora creativa de podcasts en Latinoamérica. Ayudamos a marcas y creadores a convertir ideas en experiencias sonoras profesionales: producción, edición, diseño sonoro, estrategia y distribución multicanal.">
+  <meta property="og:image" content="https://www.pewresearch.org/journalism/wp-content/uploads/sites/8/2024/02/1-jpg-jpeg.webp">
+  <meta property="og:url" content="http://www.vozlab.com/">
+  <meta property="og:type" content="website">
+  <!-- robots -->
+  <meta name="robots" content="index,follow">
+  <title>VozLab | Productora de Podcasts Profesionales en Latinoamérica</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +30,7 @@
   <header>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">VozLab</a>
+        <a class="navbar-brand" href="index.html"><img src="img/logo-vozlab.svg" alt="Logotipo de VozLab"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -28,7 +40,7 @@
               <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="podcasts.html">Podcasts</a>
+              <a class="nav-link" aria-current="page" href="podcasts.html">Podcasts</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="nuestros-planes.html">Nuestros Planes</a>
@@ -37,7 +49,7 @@
               <a class="nav-link" href="nosotros.html">Nosotros</a>
             </li>
           </ul>
-          <button type="button" class="btn btn-primary">Agenda aquí tu asesoría</button>
+          <a href="contacto.html" class="btn btn-primary">Agenda aquí tu asesoría</a>
         </div>
       </div>
     </nav>
@@ -50,8 +62,8 @@
         <h1>Dale Voz a <span class="highlight">Tu Historia</span></h1>
         <p>En VozLab convertimos ideas en podcasts memorables que conquistan oídos y corazones. Tu mensaje merece la mejor producción.</p>
         <div class="buttons">
-          <a href="#" class="btn-primary">Quiero una asesoría</a>
-          <a href="#" class="btn-secondary">Ver los servicios</a>
+          <a href="contacto.html" class="btn-primary">Quiero una asesoría</a>
+          <a href="#servicios" class="btn-secondary">Ver los servicios</a>
         </div>
         <div class="stats">
           <div class="stats-info">
@@ -69,7 +81,7 @@
         </div>
       </div>
       <div class="img-header">
-        <img src="img/vozlab-podcasters-main.png" alt="">
+        <img src="img/vozlab-podcasters-main.png" alt="Dos mujeres grabando un podcast en un estudio con micrófono profesional">
       </div>
     </div>
   </section>
@@ -77,15 +89,15 @@
   <!-- Línea de logos -->
   <section class="logos-bar">
     <div class="contenedor">
-      <img src="img/logo-spotify.png" alt="">
-      <img src="img/logo-youtube.png" alt="">
-      <img src="img/logo-apple-podcasts.png" alt="">
-      <img src="img/logo-soundcloud.png" alt="">
+      <img src="img/logo-spotify.png" alt="Disponible en Spotify">
+      <img src="img/logo-youtube.png" alt="Disponible en Youtube">
+      <img src="img/logo-apple-podcasts.png" alt="Disponible en Apple Podcasts">
+      <img src="img/logo-soundcloud.png" alt="Disponible en SoundCloud">
     </div>
   </section>
 
   <!-- Servicios -->
-  <section class="services">
+  <section id="servicios" class="services">
     <div class="contenedor">
       <!-- Título y descripción -->
       <div class="info-title-container">
@@ -95,7 +107,7 @@
       <div class="service-grid">
         <!-- Servicio 1 -->
         <div class="service-card">
-          <img src="img/ic-sharp-mic.png" alt="">
+          <img src="img/ic-sharp-mic.png" alt="Icono de micrófono para producción integral">
           <h3>Producción integral</h3>
           <p>Guión, grabación, edición y postproducción. Nos encargamos de todo el proceso creativo mientras tú te enfocas en tu mensaje.</p>
           <ul>
@@ -107,7 +119,7 @@
         </div>
         <!-- Servicio 2 -->
         <div class="service-card">
-          <img src="img/ic-design-palette.png" alt="">
+          <img src="img/ic-design-palette.png" alt="Icono de altavoz para diseño sonoro y branding">
           <h3>Diseño sonoro & branding</h3>
           <p>Creamos la identidad auditiva que te diferencia. Música, efectos sonoros y elementos que hacen único tu podcast.</p>
           <ul>
@@ -119,7 +131,7 @@
         </div>
         <!-- Servicio 3 -->
         <div class="service-card">
-          <img src="img/ic-megaphone.png" alt="">
+          <img src="img/ic-megaphone.png" alt="Icono de cohete para distribución y marketing">
           <h3>Distribución y marketing</h3>
           <p>Subimos tu podcast a todas las plataformas y diseñamos la estrategia de lanzamiento para maximizar tu alcance.</p>
           <ul>
@@ -131,7 +143,7 @@
         </div>
         <!-- Servicio 4 -->
         <div class="service-card">
-          <img src="img/ic-rocket.png" alt="">
+          <img src="img/ic-rocket.png" alt="Icono de brújula para asesoría personalizada">
           <h3>Asesoría personalizada</h3>
           <p>Sesiones uno a uno para mejorar contenidos ya creados. Perfeccionamos tu estilo y optimizamos tu mensaje.</p>
           <ul>
@@ -143,7 +155,7 @@
         </div>
       </div>
       <div class="buttons">
-        <a href="#" class="btn-primary">Solicitar más información</a>
+        <a href="contacto.html" class="btn-primary">Solicitar más información</a>
       </div>
     </div>
   </section>
@@ -158,25 +170,25 @@
       </div>
       <div class="process-content">
         <div class="image-placeholder">
-          <img src="img/podcasters.png" alt="">
+          <img src="img/podcasters.png" alt="Lista de podcasters con botones de reproducción">
         </div>
         <div class="steps">
           <div class="step">
-            <img src="img/ic-goal.png" alt="">
+            <img src="img/ic-goal.png" alt="Icono de objetivo para te escuchamos">
             <div class="step-info">
               <h4>Te escuchamos</h4>
               <p>Entendemos tu voz y tu propósito. Analizamos tu audiencia, definimos objetivos y creamos una estrategia personalizada que refleje tu esencia.</p> 
             </div>
           </div>
           <div class="step">
-            <img src="img/ic-mic-2.png" alt="">
+            <img src="img/ic-mic-2.png" alt="Icono de micrófono para creamos">
             <div class="step-info">
               <h4>Creamos</h4>
               <p>Guionizamos, grabamos y editamos con la máxima calidad. Tú solo te encargas de disfrutar mientras nosotros damos vida a tu contenido.</p>
             </div>
           </div>
           <div class="step">
-            <img src="img/ic-bar-graph.png" alt="">
+            <img src="img/ic-bar-graph.png" alt="Icono de gráfico de barras para lanzamos y medimos">
             <div class="step-info">
               <h4>Lanzamos y medimos</h4>
               <p>Publicamos tu podcast en todas las plataformas, analizamos métricas en tiempo real y afinamos la estrategia para maximizar el impacto.</p>
@@ -205,35 +217,35 @@
       <div class="podcast-grid">
         <!-- Podcast 1 -->
         <div class="podcast-card">
-          <div class="cover"><img src="img/leyendas-legendarias.jpg" alt=""></div>
+          <div class="cover"><img src="img/leyendas-legendarias.jpg" alt="Portada del podcast Leyendas Legendarias"></div>
           <h4>Leyendas Legendarias</h4>
           <p>Un podcast de comedia donde cada semana exploramos casos de crimen real y paranormales y eventos históricos peculiares y fantásticos.</p>
           <a href="#" class="btn-listen">▶ Escuchar</a>
         </div>
         <!-- Podcast 2 -->
         <div class="podcast-card">
-          <div class="cover"><img src="img/bestias.png" alt=""></div>
+          <div class="cover"><img src="img/bestias.png" alt="Portada del podcast Bestias"></div>
           <h4>Bestias</h4>
           <p>Crímenes reales analizados con rigor y tensión por la criminóloga Beatriz de Vicente. Psicología, narrativa y misterio en cada episodio.</p>
           <a href="#" class="btn-listen">▶ Escuchar</a>
         </div>
         <!-- Podcast 3 -->
         <div class="podcast-card">
-          <div class="cover"><img src="img/diana-uribe-fm.jpeg" alt=""></div>
+          <div class="cover"><img src="img/diana-uribe-fm.jpeg" alt="Portada del podcast Diana Uribe FM"></div>
           <h4>Diana Uribe FM</h4>
           <p>Historia del mundo narrada con pasión por una de las voces más icónicas de Colombia. Contexto, emoción y conocimiento profundo.</p>
           <a href="#" class="btn-listen">▶ Escuchar</a>
         </div>
         <!-- Podcast 4 -->
         <div class="podcast-card">
-          <div class="cover"><img src="img/la-historia-de-las-cosas.jpeg" alt=""></div>
+          <div class="cover"><img src="img/la-historia-de-las-cosas.jpeg" alt="Portada del podcast La Historia de las Cosas"></div>
           <h4>La historia de las cosas</h4>
           <p>Explora el origen de los objetos que usamos a diario. Un podcast curioso, didáctico y lleno de sorpresas históricas.</p>
           <a href="#" class="btn-listen">▶ Escuchar</a>
         </div>
       </div>
       <div class="buttons">
-        <a href="#" class="btn-primary">Explorar más podcasts</a>
+        <a href="podcasts.html" class="btn-primary">Explorar más podcasts</a>
       </div>
     </div>
   </section>
