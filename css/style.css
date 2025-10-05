@@ -177,6 +177,11 @@ h4 {
     gap: 1.25rem;
   }
 }
+@media (max-width: 576px) {
+  .hero .text .stats {
+    gap: 0.9375rem;
+  }
+}
 .hero .text .stats .stats-info h4 {
   font-size: 1.75rem;
   font-weight: 800;
@@ -221,21 +226,21 @@ h4 {
 }
 @media (max-width: 576px) {
   .logos-bar .contenedor {
-    gap: 0.3125rem;
+    gap: none;
   }
 }
 .logos-bar img {
   width: auto;
-  height: 30px;
+  height: 1.875rem;
 }
 @media (max-width: 768px) {
   .logos-bar img {
-    height: 20px;
+    height: 1.25rem;
   }
 }
 @media (max-width: 576px) {
   .logos-bar img {
-    height: 10px;
+    height: 0.75rem;
   }
 }
 
@@ -379,7 +384,9 @@ body {
 }
 @media (max-width: 576px) {
   .success-stories .tags {
+    width: 100%;
     flex-wrap: nowrap;
+    justify-content: left;
     overflow-x: auto;
   }
 }
@@ -455,6 +462,13 @@ body {
   justify-content: none;
   grid-gap: 1.25rem;
 }
+@media (max-width: 576px) {
+  .podcasts-categories .contenedor .category-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.625rem;
+  }
+}
 .podcasts-categories .contenedor .category-grid .category-card {
   border-radius: 1.25rem;
   min-height: 300px;
@@ -469,6 +483,13 @@ body {
   justify-content: flex-end;
   align-items: flex-start;
   gap: none;
+}
+@media (max-width: 576px) {
+  .podcasts-categories .contenedor .category-grid .category-card .texts {
+    width: 230px;
+  }
+}
+.podcasts-categories .contenedor .category-grid .category-card .texts {
   padding: 10px 20px;
   border-radius: 20px;
   height: 100%;

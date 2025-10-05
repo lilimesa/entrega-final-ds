@@ -113,7 +113,9 @@ body {
       margin-bottom: 2.5rem;
 
       @include mobile{
+        width: 100%;
         flex-wrap: nowrap;
+        justify-content: left;
         overflow-x: auto;
       }
 
@@ -174,6 +176,12 @@ body {
         }
         .category-grid{
           @include grid(repeat(2, 1fr),none,none,1.25rem);
+
+          @include mobile{
+            display: flex;
+            overflow-x: auto;
+            gap: .625rem;
+          }
             .category-card{
               border-radius: 1.25rem;
               min-height: 300px;
@@ -182,6 +190,11 @@ body {
               background-position: center center;
                 .texts{
                   @include flex(wrap,column,flex-end,flex-start,none);
+
+                  @include mobile{
+                    width: 230px;
+                  }
+
                   padding: 10px 20px;
                   border-radius: 20px;
                   height: 100%;
