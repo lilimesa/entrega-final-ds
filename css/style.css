@@ -380,7 +380,7 @@ body {
 @media (max-width: 576px) {
   .success-stories .tags {
     flex-wrap: nowrap;
-    overflow: hidden;
+    overflow-x: auto;
   }
 }
 .success-stories .tags button {

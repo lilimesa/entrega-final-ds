@@ -114,7 +114,7 @@ body {
 
       @include mobile{
         flex-wrap: nowrap;
-        overflow: hidden;
+        overflow-x: auto;
       }
 
         button{
